@@ -85,6 +85,10 @@ escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
 
+esm@^3.0.51:
+  version "3.0.51"
+  resolved "https://registry.yarnpkg.com/esm/-/esm-3.0.51.tgz#35c3bcd0237867ab09020728135bfdb91ec79c90"
+
 etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"

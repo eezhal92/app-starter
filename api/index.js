@@ -1,20 +1,3 @@
-const cors = require('cors');
-const express = require('express');
-
-const app = express();
-const port = 4000;
-
-app.use(cors({
-  origin: '*',
-}));
-
-app.get('/', (request, response) => {
-  response.json({
-    message: 'Hello',
-  });
-});
-
-app.listen(port, () => {
-  // eslint-disable-next-line no-console
-  console.log(`Running on ${port}`);
-});
+// eslint-disable-next-line no-global-assign
+require = require('esm')(module);
+module.exports = require('./src/main.js');
