@@ -1,0 +1,33 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest/globals": true
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "import",
+    "jest"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": [
+          "node_modules",
+          "memoku-web",
+          "package"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "no-unused-vars": [0, { "argsIgnorePattern": "next" }],
+    "no-underscore-dangle": [0, { "varIgnorePattern": ["__filename", "__dirname"] }],
+    "global-require": 0,
+    "class-methods-use-this": 0,
+    "import/no-dynamic-require": 0,
+    "func-names": 0,
+    "react/jsx-filename-extension": 0
+  }
+}
