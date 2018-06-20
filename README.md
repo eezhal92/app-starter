@@ -1,5 +1,9 @@
 # starter-app
 
+## Requirements
+- NodeJS 8.9.4
+- Yarn 1.7.0
+
 ## Directory Structure
 
 ```sh
