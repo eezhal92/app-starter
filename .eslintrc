@@ -8,20 +8,20 @@
   "parser": "babel-eslint",
   "plugins": [
     "import",
-    "jest"
+    "jest",
+    "flowtype"
   ],
   "settings": {
     "import/resolver": {
       "node": {
         "moduleDirectory": [
-          "node_modules",
-          "memoku-web",
-          "package"
+          "node_modules"
         ]
       }
     }
   },
   "rules": {
+    "no-undef": [0, { "argsIgnorePattern": "$FlowFixMe" }],
     "no-unused-vars": [0, { "argsIgnorePattern": "next" }],
     "no-underscore-dangle": [0, { "varIgnorePattern": ["__filename", "__dirname"] }],
     "global-require": 0,

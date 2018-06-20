@@ -5,15 +5,16 @@ const app = express();
 const port = 4000;
 
 app.use(cors({
-  origin: '*'
+  origin: '*',
 }));
 
 app.get('/', (request, response) => {
   response.json({
-    message: "Hello"
-  })
+    message: 'Hello',
+  });
 });
 
 app.listen(port, () => {
-  console.log(`Running on ${port}`)
+  // eslint-disable-next-line no-console
+  console.log(`Running on ${port}`);
 });

@@ -1,7 +1,18 @@
+// @flow
 import axios from 'axios';
 import React, { Component } from 'react';
 
-class App extends Component {
+type TextProps = {
+  message: string,
+};
+
+const Text = (props: TextProps) => <div>{props.message}</div>;
+
+type AppState = {
+  message: string,
+};
+
+class App extends Component<$FlowFixMe, AppState> {
   state = {
     message: '',
   };
@@ -25,6 +36,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Hello</h1>
+        <Text />
         <p>Message: {this.state.message}</p>
       </div>
     );
