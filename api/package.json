@@ -1,10 +1,10 @@
 {
   "dependencies": {
     "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
     "esm": "^3.0.51",
-    "express": "^4.16.3"
-  },
-  "scripts": {
-    "dev": "node index"
+    "express": "^4.16.3",
+    "mongoose": "^5.1.6",
+    "mongration": "^1.0.0"
   }
 }

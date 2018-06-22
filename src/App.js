@@ -10,15 +10,18 @@ const Text = (props: TextProps) => <div>{props.message}</div>;
 
 type AppState = {
   message: string,
+  posts: Array,
 };
 
 class App extends Component<$FlowFixMe, AppState> {
   state = {
     message: '',
+    posts: [],
   };
 
   componentDidMount() {
     this.getMessage();
+    this.getPosts();
   }
 
   getMessage() {
@@ -32,12 +35,24 @@ class App extends Component<$FlowFixMe, AppState> {
       });
   }
 
+  getPosts() {
+    axios
+      .get('http://localhost:4000/posts')
+      .then(response => response.data)
+      .then((data) => {
+        this.setState({
+          posts: data.posts,
+        });
+      });
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Hello</h1>
-        <Text />
+        <Text message="Hmm" />
         <p>Message: {this.state.message}</p>
+        {this.state.posts.map(item => <div key={item.id}>{item.title}</div>)}
       </div>
     );
   }

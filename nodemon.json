@@ -1,0 +1,17 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    "api/node_modules/**/node_modules",
+    "node_modules/**/node_modules",
+    "public"
+  ],
+  "verbose": true,
+  "watch": [
+    "api"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js json"
+}

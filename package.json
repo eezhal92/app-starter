@@ -8,9 +8,15 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "es6-error": "^4.1.1",
     "esm": "^3.0.51",
     "express": "^4.16.3",
+    "http-status": "^1.2.0",
+    "mongoose": "^5.1.6",
+    "mongration": "^1.0.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
@@ -20,7 +26,10 @@
     "build:web": "react-scripts build",
     "test:web": "react-scripts test --env=jsdom",
     "eject:web": "react-scripts eject",
-    "dev:api": "node api/index.js",
+    "dev:api": "nodemon ./api/index.js",
+    "db:migrate": "mongration -c ./api/src/migrations/config.js -f ./api/src/migrations",
+    "db:seed": "node -r esm ./scripts/seed.js",
+    "db:reset": "node -r esm ./scripts/truncate.js",
     "flow": "flow",
     "lint:staged": "lint-staged",
     "flow:deps": "flow-typed install",
@@ -39,6 +48,7 @@
     "flow-typed": "^2.4.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.0",
+    "nodemon": "^1.17.5",
     "prettier": "^1.13.5"
   },
   "lint-staged": {

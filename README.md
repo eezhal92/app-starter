@@ -9,18 +9,32 @@
 ```sh
 starter-app/
 ├── api        # API server
-├── src        # Frontend
+├── public     # Frontend public static files
+├── scripts    # Script for setup etc
+├── shared     # Shared code between api and client, no spesific env api allowed here
+└── src        # Frontend
 ```
 
 ## Setup
 
+Install dependencies
 ```sh
 yarn install
 ```
 
+Seed the data if there's no any
+
+```
+yarn db:seed
+```
+
+Run the web api server
+
 ```sh
 yarn dev:api
 ```
+
+Run the web client server
 
 ```sh
 yarn dev:web
